@@ -3,3 +3,7 @@
 Une collection d'APIs robustes et documentées pour notre site en API REST (liverpool.alwaysdata.net)
 
 ---
+# Contributeurs
+
+- Nathan HISABU
+- Yeadonaye SENTAYEHU
