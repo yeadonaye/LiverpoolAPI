@@ -1,6 +1,8 @@
 # 🚀 API Hub : Gestion d'Equipe Liverpool
 
-Une collection d'APIs robustes et documentées pour notre site en API REST (liverpool.alwaysdata.net)
+Contient l'API qui gère les authentifications pour le (site)[liverpool.alwaysdata.net] de gestion d'Equipe.
+
+Cet API sera héberger sur (apiliverpool.alwaysdata.net)[apiliverpool.alwaysdata.net]
 
 ---
 # Contributeurs
