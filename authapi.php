@@ -1,6 +1,6 @@
 <?php
     require_once 'jwt_utils.php';
-    require_once 'connexionBD.php'; // Nous utilisons une BD à part
+    require_once 'connexionDB.php'; // Nous utilisons une BD à part
 
     function seConnecter() {
     global $linkpdo;
