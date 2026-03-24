@@ -1,0 +1,25 @@
+# Fichiers de configuration sensibles
+.env
+
+# Fichiers de logs
+*.log
+
+# Fichiers temporaires
+*.tmp
+*.temp
+/tmp/
+
+# Dossiers de dépendances (si applicable plus tard)
+vendor/
+node_modules/
+
+# Fichiers de l'IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Fichiers système
+.DS_Store
+Thumbs.db
