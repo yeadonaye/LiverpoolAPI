@@ -31,7 +31,7 @@
     }
 
     return $error ?? null;
-}
+    }
 
     function isValidUser($login, $password, $linkpdo) {
         $query = "SELECT password, role FROM authentification WHERE login = :login"; 
@@ -43,5 +43,10 @@
             return $user; 
         }
         return false;
+    }
+
+    $resultError = seConnecter();
+    if ($resultError) {
+        deliver_response(401, $resultError);
     }
 ?>
