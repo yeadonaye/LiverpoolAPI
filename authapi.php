@@ -5,6 +5,8 @@
     function seConnecter() {
     global $linkpdo;
 
+    $error = null;
+
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $login = $_POST['login'] ?? null;
         $password = $_POST['password'] ?? null;
@@ -21,7 +23,7 @@
                 ];
 
                 $jwt = generate_jwt($headers, $payload, "secret_key");
-                deliver_response('200', 'Authentification réussie', $jwt);
+                deliver_response(200, "Authentification réussie", $jwt);
             } else {
                 $error = 'Login et/ou mot de passe incorrectes';
             }
@@ -47,6 +49,6 @@
 
     $resultError = seConnecter();
     if ($resultError) {
-        deliver_response(401, $resultError);
+        deliver_response(401, "Unauthorized", $resultError);
     }
 ?>
