@@ -8,10 +8,10 @@
 // BD_TYPE, BD_HOST, BD_PORT, BD_NAME, BD_USER, BD_PASS, BD_CHARSET
 
 define('BD_TYPE', getenv('BD_TYPE') ?: 'mysql');                          // Type de la BD
-define('BD_HOST', getenv('BD_HOST') ?: 'mysql-yeadonaye.alwaysdata.net'); // Nom du serveur
+define('BD_HOST', getenv('BD_HOST') ?: 'mysql-liverpool.alwaysdata.net'); // Nom du serveur
 define('BD_PORT', getenv('BD_PORT') ?: 3306);                             // Port MySQL standard
-define('BD_NAME', getenv('BD_NAME') ?: 'yeadonaye_bd_gestion_equipe');    // Nom de la BD        
-define('BD_USER', getenv('BD_USER') ?: 'yeadonaye');                      // Utilisateur
+define('BD_NAME', getenv('BD_NAME') ?: 'liverpool_authentification');     // Nom de la BD        
+define('BD_USER', getenv('BD_USER') ?: 'liverpool');                      // Utilisateur
 define('BD_PASS', getenv('BD_PASS') ?: 'admin@gestionFoot');              // Mot de passe      
 define('BD_CHARSET', getenv('BD_CHARSET') ?: 'utf8mb4');                  // Encodage des caractères
 
