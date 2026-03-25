@@ -26,7 +26,7 @@
                 $error = 'Login et/ou mot de passe incorrectes';
             }
         } else {
-            $error = 'Les champs login et password sont obligatoires';
+            $error = 'Les champs login et password sont obligatoires!!';
         }
     }
 
