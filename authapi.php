@@ -25,6 +25,7 @@
                 ];
 
                 $jwt = generate_jwt($headers, $payload, "secret_key");
+                header("Authorization: Bearer $jwt"); // Pour ajouter le token dans les headers de la réponse
                 deliver_response(200, "Authentification réussie", $jwt);
             } else {
                 $error = 'Login et/ou mot de passe incorrectes';
