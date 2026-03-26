@@ -1,4 +1,17 @@
 <?php
+
+    // Autoriser les requete cross-origin
+    header("Access-Control-Allow-Origin: https://liverpool.alwaysdata.net");
+    header("Access-Control-Allow-Methods: POST, OPTIONS");
+    header("Access-Control-Allow-Headers: Content-Type, Authorization");
+
+    // Au cas où le client envoie une requete OPTIONS, on répend directement avec un code 200 pour dire que tout est ok
+    // Quand le frontend fait une requete (POST, PUT, DELETE) vers une API qui est sur un autre domaine, le navigateur envoie d'abord une requete OPTIONS pour vérifier si le serveur autorise les requetes venant d'autre origines (CORS). Si le serveur répond avec les bons headers, alors le navigateur envoie la requete réelle (POST, PUT, DELETE).
+    if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+        http_response_code(200);
+        exit;
+    }
+
     require_once 'jwt_utils.php';
     require_once 'connexionDB.php'; // Nous utilisons une BD à part
 
