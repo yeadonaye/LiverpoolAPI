@@ -88,6 +88,18 @@
 
         return $error ?? null;
     }
+    
+    function isValidUser($login, $password, $linkpdo) {
+        $query = "SELECT password, role FROM authentification WHERE login = :login"; 
+        $stmt = $linkpdo->prepare($query);
+        $stmt->execute(['login' => $login]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($user && password_verify($password, $user['password'])) {
+            return $user; 
+        }
+        return false;
+    }
 
     $resultError = seConnecter();
     if ($resultError) {
